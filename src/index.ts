@@ -15,7 +15,7 @@ app.use(express.json());
 
 // --- 1. HEALTH CHECK ---
 app.get('/', (req, res) => {
-  res.send('Restaurant API is running smoothly 🚀');
+  res.send('Restaurant API is running smoothly ');
 });
 
 // --- 2. DASHBOARD ANALYTICS ---
@@ -187,11 +187,4 @@ app.get('/api/orders/:id/items', async (req: Request, res: Response) => {
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch order items' });
   }
-});
-// --- 12. SERVER START ---
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`
-  
-   Local:   http://localhost:${PORT}
- `);
 });
